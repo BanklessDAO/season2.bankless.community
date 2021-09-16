@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <!-- Primary Meta Tags -->
     <title>Season 2 | Bankless DAO</title>
     <meta name="title" content="Season 2 | Bankless DAO" />
@@ -18,10 +18,10 @@
     <meta property="og:image:height" content="330" />
     <!-- Twitter -->
     <meta property="twitter:url" content="https://season2.bankless.community/" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Season 2 | Bankless DAO">
-    <meta name="twitter:description" content="Recap for Season 1 and intro to Season 2 🚀">
-    <meta name="twitter:image" content="https://season2.bankless.community/Season1-Meta.jpg">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Season 2 | Bankless DAO" />
+    <meta name="twitter:description" content="Recap for Season 1 and intro to Season 2 🚀" />
+    <meta name="twitter:image" content="https://season2.bankless.community/Season1-Meta.jpg" />
     <!-- favicons -->
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="33x33" href="/favicon.png" />
@@ -115,7 +115,6 @@
             }
         }
     </style>
-
 </head>
 
 <body>
@@ -139,8 +138,8 @@
                 </p>
                 <p>
                     <a href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
-            RSVP
-          </a>
+              RSVP
+            </a>
                 </p>
             </div>
         </div>
@@ -148,38 +147,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
         // Automatic scroll
-        $(window).on('load', function() {
-            $('html, body').animate({
+        $(window).on("load", function() {
+            $("html, body").animate({
                 scrollLeft: 0,
-            })
+            });
 
             setTimeout(() => {
-                $('html, body').animate({
-                        scrollLeft: $('.season2').offset().left,
+                $("html, body").animate({
+                        scrollLeft: $(".season2").offset().left,
                     },
                     20000
-                )
-            }, 1500)
-        })
+                );
+            }, 1500);
+        });
 
         function scrollHorizontally(e) {
-            e = window.event || e
-            const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail))
-            const scrollSpeed = 20
-            document.documentElement.scrollLeft -= delta * scrollSpeed
-            document.body.scrollLeft -= delta * scrollSpeed
+            e = window.event || e;
+            const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+            const scrollSpeed = 20;
+            document.documentElement.scrollLeft -= delta * scrollSpeed;
+            document.body.scrollLeft -= delta * scrollSpeed;
         }
 
-        if (typeof window !== 'undefined') {
-
+        if (typeof window !== "undefined") {
             if (window.addEventListener) {
                 // IE9, Chrome, Safari, Opera
-                window.addEventListener('mousewheel', scrollHorizontally, false)
-                    // Firefox
-                window.addEventListener('DOMMouseScroll', scrollHorizontally, false)
+                window.addEventListener("mousewheel", scrollHorizontally, false);
+                // Firefox
+                window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
             } else {
                 // IE 6/7/8
-                window.attachEvent('onmousewheel', scrollHorizontally)
+                window.attachEvent("onmousewheel", scrollHorizontally);
             }
         }
     </script>
