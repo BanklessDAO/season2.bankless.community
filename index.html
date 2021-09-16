@@ -2,184 +2,187 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <!-- Primary Meta Tags -->
-  <title>Season 2 | Bankless DAO</title>
-  <meta name="title" content="Season 2 | Bankless DAO" />
-  <meta name="description" content="Recap for Season 1 and intro to Season 2 🚀" />
-  <!-- Open Graph / Facebook (needs to be < 300kb to work on WhatsApp) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://season2.bankless.community/" />
-  <meta property="og:title" content="Season 2 | Bankless DAO" />
-  <meta property="og:description" content="Recap for Season 1 and intro to Season 2 🚀" />
-  <meta property="og:image" content="https://season2.bankless.community/Season1-Meta.jpg" />
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="330" />
-  <!-- Twitter -->
-  <meta property="twitter:url" content="https://season2.bankless.community/" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Season 2 | Bankless DAO">
-  <meta name="twitter:description" content="Recap for Season 1 and intro to Season 2 🚀">
-  <meta name="twitter:image" content="https://season2.bankless.community/Season1-Meta.jpg">
-  <!-- favicons -->
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="33x33" href="/favicon.png" />
-  <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="/favicon.png" />
-  <style type="text/css">
-    html, * {
-      margin: 0;
-    }
-
-    .container {
-      height: 100vh;
-      max-height: 100vh;
-      overflow-x: scroll;
-      overflow-y: hidden;
-    }
-
-    .intro {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-    }
-
-    .scroll {
-      position: absolute;
-      top: 0;
-      left: 100vw;
-      min-width: 100vw;
-      height: 100vh;
-      display: flex;
-    }
-
-    .recap {
-      height: 100%;
-    }
-
-    .recap img {
-      height: 100%;
-      width: auto;
-    }
-
-    .season2 {
-      width: 100vw;
-      height: 100vh;
-      max-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      place-content: center;
-      text-align: center;
-    }
-
-    .season2 h1,
-    h2 {
-      line-height: 1em;
-      font-weight: bold;
-    }
-
-    .season2 h1 {
-      font-size: 6em;
-    }
-
-    .season2 h1 span {
-      font-size: 1em;
-      font-weight: bold;
-      color: #cb2529;
-    }
-
-    .season2 h2 {
-      font-size: 3em;
-    }
-
-    .season2 p {
-      margin-top: 1em;
-      font-size: 2em;
-      line-height: 1em;
-    }
-
-    @media (max-width: 800px) {
-      .season2 h1 {
-        font-size: 3em;
-      }
-
-      .season2 h2 {
-        font-size: 2em;
-      }
-
-      .season2 p {
-        font-size: 1em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Primary Meta Tags -->
+    <title>Season 2 | Bankless DAO</title>
+    <meta name="title" content="Season 2 | Bankless DAO" />
+    <meta name="description" content="Recap for Season 1 and intro to Season 2 🚀" />
+    <!-- Open Graph / Facebook (needs to be < 300kb to work on WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://season2.bankless.community/" />
+    <meta property="og:title" content="Season 2 | Bankless DAO" />
+    <meta property="og:description" content="Recap for Season 1 and intro to Season 2 🚀" />
+    <meta property="og:image" content="https://season2.bankless.community/Season1-Meta.jpg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="330" />
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://season2.bankless.community/" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Season 2 | Bankless DAO">
+    <meta name="twitter:description" content="Recap for Season 1 and intro to Season 2 🚀">
+    <meta name="twitter:image" content="https://season2.bankless.community/Season1-Meta.jpg">
+    <!-- favicons -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="33x33" href="/favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="/favicon.png" />
+    <style type="text/css">
+        html,
+        * {
+            margin: 0;
+        }
+        
+        html::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .container {
+            height: 100vh;
+            max-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .intro {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        
+        .scroll {
+            position: absolute;
+            top: 0;
+            left: 100vw;
+            min-width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+        
+        .recap {
+            height: 100%;
+        }
+        
+        .recap img {
+            height: 100%;
+            width: auto;
+        }
+        
+        .season2 {
+            width: 100vw;
+            height: 100vh;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            place-content: center;
+            text-align: center;
+        }
+        
+        .season2 h1,
+        h2 {
+            line-height: 1em;
+            font-weight: bold;
+        }
+        
+        .season2 h1 {
+            font-size: 6em;
+        }
+        
+        .season2 h1 span {
+            font-size: 1em;
+            font-weight: bold;
+            color: #cb2529;
+        }
+        
+        .season2 h2 {
+            font-size: 3em;
+        }
+        
+        .season2 p {
+            margin-top: 1em;
+            font-size: 2em;
+            line-height: 1em;
+        }
+        
+        @media (max-width: 800px) {
+            .season2 h1 {
+                font-size: 3em;
+            }
+            .season2 h2 {
+                font-size: 2em;
+            }
+            .season2 p {
+                font-size: 1em;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
-  <div class="container">
-    <img class="intro" src="/Season1-Intro.jpg" />
-    <div class="scroll">
-      <div class="recap">
-        <img src="/Season1-Recap.jpg" />
-      </div>
-      <div class="season2">
-        <h2>Season 2</h2>
-        <h1>
-          Bankless
-          <br />
-          HQ <span>+</span> DAO
-        </h1>
-        <p>
-          October 8, 2021
-          <br />
-          11 am EDT
-          <br />
-          <a href="https://twitter.com/BanklessHQ">@BanklessHQ Twitter</a>
-        </p>
-        <p>
-          <a href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
+    <div class="container">
+        <img class="intro" src="/Season1-Intro.jpg" />
+        <div class="scroll">
+            <div class="recap">
+                <img src="/Season1-Recap.jpg" />
+            </div>
+            <div class="season2">
+                <h2>Season 2</h2>
+                <h1>
+                    Bankless
+                    <br /> HQ <span>+</span> DAO
+                </h1>
+                <p>
+                    October 8, 2021
+                    <br /> 11 am EDT
+                    <br />
+                    <a href="https://twitter.com/BanklessHQ">@BanklessHQ Twitter</a>
+                </p>
+                <p>
+                    <a href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
             RSVP
           </a>
-        </p>
-      </div>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    function scrollHorizontally(e) {
-      e = window.event || e
-      const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail))
-      const scrollSpeed = 20
-      document.documentElement.scrollLeft -= delta * scrollSpeed
-      document.body.scrollLeft -= delta * scrollSpeed
-    }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        // Automatic scroll
+        $(window).on('load', function() {
+            $('html, body').animate({
+                scrollLeft: 0,
+            })
 
-    if (typeof window !== 'undefined') {
-      document.documentElement.scrollLeft = 0
-      const scrollSpeed =
-        window.innerWidth > 1000
-          ? window.innerWidth / 200
-          : window.innerWidth / 100
-      const scrollInterval = setInterval(() => {
-        document.documentElement.scrollLeft += scrollSpeed
-        if (
-          document.documentElement.scrollWidth <=
-          document.documentElement.scrollLeft +
-          document.documentElement.clientWidth
-        )
-          clearInterval(scrollInterval)
-      }, 10)
-      if (window.addEventListener) {
-        // IE9, Chrome, Safari, Opera
-        window.addEventListener('mousewheel', scrollHorizontally, false)
-        // Firefox
-        window.addEventListener('DOMMouseScroll', scrollHorizontally, false)
-      } else {
-        // IE 6/7/8
-        window.attachEvent('onmousewheel', scrollHorizontally)
-      }
-    }
-  </script>
+            setTimeout(() => {
+                $('html, body').animate({
+                        scrollLeft: $('.season2').offset().left,
+                    },
+                    20000
+                )
+            }, 1500)
+        })
+
+        function scrollHorizontally(e) {
+            e = window.event || e
+            const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail))
+            const scrollSpeed = 20
+            document.documentElement.scrollLeft -= delta * scrollSpeed
+            document.body.scrollLeft -= delta * scrollSpeed
+        }
+
+        if (typeof window !== 'undefined') {
+
+            if (window.addEventListener) {
+                // IE9, Chrome, Safari, Opera
+                window.addEventListener('mousewheel', scrollHorizontally, false)
+                    // Firefox
+                window.addEventListener('DOMMouseScroll', scrollHorizontally, false)
+            } else {
+                // IE 6/7/8
+                window.attachEvent('onmousewheel', scrollHorizontally)
+            }
+        }
+    </script>
 </body>
 
 </html>
