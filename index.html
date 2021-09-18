@@ -333,8 +333,8 @@
             <h1>Season 2 Launch</h1>
             <p>
               <a class="calendar" title="Add to Calendar" target="_blank"
-                href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20211008T150000Z%2F20212008T150000Z&text=BANKLESS%20DAO%20%2B%20HQ%20Season%202%20launch&location=https%3A%2F%2Ftwitter.com%2FBanklessHQ&details=RSVP%3A%20https%3A%2F%2Fwww.notion.so%2Fbankless%2FSeason-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
-                <img src="/assets/images/date.jpg" /> October 8 2021, at 11 AM EDT
+                href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20211008T150000Z%2F20211008T160000Z&text=BANKLESS%20DAO%20%2B%20HQ%20Season%202%20launch&location=https%3A%2F%2Ftwitter.com%2FBanklessHQ&details=RSVP%3A%20https%3A%2F%2Fwww.notion.so%2Fbankless%2FSeason-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
+                <img src="/assets/images/date.jpg" /> <span class="date">October 8 2021</span>, at <span class="time">11 AM EDT</span>
               </a>
             </p>
             <p>
@@ -363,20 +363,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone.min.js"
+    integrity="sha512-jkvef+BAlqJubZdUhcyvaE84uD9XOoLR3e5GGX7YW7y8ywt0rwcGmTQHoxSMRzrJA3+Jh2T8Uy6f8TLU3WQhpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-2012-2022.min.js"
+    integrity="sha512-xFvEGAiMhvg1LBpa1KLutjlVHXSfe7Fq9dpAFqkRoSb31oZXIBTCxxhdmoXtJBbiQJk3RDu1GYfb8+OWqF9ehA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript">
     // Automatic scroll
     $(window).on("load", function () {
-      $("html, body").animate({
-        scrollLeft: 0,
-      });
-
-      setTimeout(() => {
+      if (window.location.host === 'season2.bankless.community' || window.location.host.includes('.vercel.app')) {
+        // only do the auto-scrolling on prod or preview link
         $("html, body").animate({
-          scrollLeft: $(".season2").offset().left,
-        },
-          20000
-        );
-      }, 1500);
+          scrollLeft: 0,
+        });
+
+        setTimeout(() => {
+          $("html, body").animate({
+            scrollLeft: $(".season2").offset().left,
+          },
+            20000
+          );
+        }, 1500);
+      }
     });
 
     function scrollHorizontally(e) {
@@ -398,6 +410,10 @@
         window.attachEvent("onmousewheel", scrollHorizontally);
       }
     }
+    const season2LaunchEventTimeInIST = moment.tz("2021-10-08 11:00", "America/New_York")
+    const userTimeZone = moment.tz.guess(true);
+    $('.date').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("MMMM D YYYY"))
+    $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH A z"))
   </script>
 </body>
 
