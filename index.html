@@ -2,368 +2,403 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <!-- Primary Meta Tags -->
-    <title>Season 2 | BanklessDAO</title>
-    <meta name="title" content="Season 2 | BanklessDAO" />
-    <meta name="description" content="RSVP for Season 2 launch 🚀" />
-    <!-- Open Graph / Facebook (needs to be < 300kb to work on WhatsApp) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://season2.bankless.community/" />
-    <meta property="og:title" content="Season 2 | BanklessDAO" />
-    <meta property="og:description" content="RSVP for Season 2 launch 🚀" />
-    <meta property="og:image" content="https://season2.bankless.community/assets/images/Season1-Meta.jpg" />
-    <meta property="og:image:width" content="600" />
-    <meta property="og:image:height" content="330" />
-    <!-- Twitter -->
-    <meta property="twitter:url" content="https://season2.bankless.community/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Season 2 | BanklessDAO" />
-    <meta name="twitter:description" content="RSVP for Season 2 launch 🚀" />
-    <meta name="twitter:image" content="https://season2.bankless.community/assets/images/Season1-Meta.jpg" />
-    <!-- favicons -->
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="33x33" href="/favicon.png" />
-    <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="/favicon.png" />
-    <style type="text/css">
-        * {
-            margin: 0;
-            outline: none;
-        }
-        
-        html {
-            background-color: #000;
-        }
-        
-        html::-webkit-scrollbar {
-            display: none;
-        }
-        
-        @font-face {
-            font-family: "Clear Sans Bold";
-            src: url("/assets/fonts/ClearSans-Bold.woff");
-        }
-        
-        @font-face {
-            font-family: "Arial Bold";
-            src: url("/assets/fonts/ARIALBD.woff");
-        }
-        
-        .container {
-            height: 100vh;
-            max-height: 100vh;
-            overflow: hidden;
-        }
-        
-        .intro {
-            width: 100vw;
-            height: 100vh;
-            background-image: url("/assets/images/Season1-Intro.jpg");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .intro-text-container {
-            width: 60%;
-            height: 60%;
-            border-radius: 1em;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .intro h1,
-        h2 {
-            font-family: "Clear Sans Bold";
-            line-height: 1em;
-            font-weight: bold;
-            color: #fff
-        }
-        
-        .intro h1 {
-            font-size: 8em;
-        }
-        
-        .intro h2 .plus-icon {
-            font-size: 1em;
-            font-weight: bold;
-            color: #cb2529;
-        }
-        
-        .intro h2 {
-            font-size: 6em;
-            margin-top: 0.3em;
-        }
-        
-        .scroll {
-            position: absolute;
-            top: 0;
-            left: 100vw;
-            min-width: 100vw;
-            height: 100vh;
-            display: flex;
-        }
-        
-        .recap {
-            height: 100%;
-        }
-        
-        .recap img {
-            height: 100%;
-            width: auto;
-        }
-        
-        .season2 {
-            width: 100vw;
-            height: 100vh;
-            color: #fff;
-            max-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            place-content: center;
-            text-align: center;
-        }
-        
-        .season2-background {
-            width: 100vw;
-            height: 100vh;
-        }
-        
-        .season2-background-top,
-        .season2-background-bottom {
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            top: 0;
-        }
-        
-        .season2-background-top {
-            background-image: url(/assets/images/Season1-Endscreen-Top.jpg);
-            background-position: top;
-        }
-        
-        .season2-background-bottom {
-            background-image: url(/assets/images/Season1-Endscreen-Bottom.jpg);
-            background-position: bottom;
-        }
-        
-        .season2-launch h1,
-        .season2-launch p {
-            font-family: "Ariel Bold";
-        }
-        
-        .season2 .season2-launch h1 {
-            font-size: 2.5em;
-        }
-        
-        .season2 .season2-launch p {
-            margin-top: 0.3em;
-            margin-bottom: 1em;
-            font-size: 1.8em;
-        }
-        
-        .red-underline {
-            text-decoration-line: underline;
-            text-decoration-thickness: 0.2em;
-            text-decoration-color: #cb2529;
-            text-decoration-skip-ink: none;
-        }
-        
-        .season2 h1,
-        h2 {
-            font-family: "Clear Sans Bold";
-            line-height: 1em;
-            font-weight: bold;
-        }
-        
-        .season2 h1 {
-            font-size: 8em;
-            height: max-content;
-        }
-        
-        .season2 h2 .plus-icon {
-            font-size: 1em;
-            font-weight: bold;
-            color: #cb2529;
-        }
-        
-        .season2 h2 {
-            font-size: 6em;
-            margin-top: 0.3em;
-        }
-        
-        .cta-container {
-            margin-top: 4em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .season2 .rsvp {
-            font-family: "Arial Bold";
-            font-size: 1.6em;
-            padding: 0.5em 1.5em 0.5em 1.5em;
-            border-radius: 2em;
-            background-color: #cb2529;
-            color: #fff;
-            text-decoration: none;
-            outline: none;
-        }
-        
-        .season2 .twitter {
-            margin-left: 0.8em;
-            height: 3.5em;
-            width: 3.5em;
-            background-image: url("/assets/images/Twitter-Logo.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        
-        @media (max-width: 1280px) {
-            .intro-text-container {
-                width: 80%;
-                height: 50%;
-            }
-            .intro h1 {
-                font-size: 3em;
-            }
-            .intro h2 {
-                font-size: 2.5em;
-            }
-        }
-        
-        @media (max-width: 800px) {
-            .season2-background-bottom {
-                background-image: url(/assets/images/Season1-Endscreen-Bottom-Mobile.jpg);
-                background-position: bottom;
-            }
-            .season2 .season2-launch h1 {
-                font-size: 1.3em;
-            }
-            .season2 .season2-launch p {
-                font-size: 1em;
-            }
-            .season2 h1 {
-                font-size: 3em;
-            }
-            .season2 h2 {
-                margin-top: 0.3em;
-                font-size: 2.5em;
-            }
-            .season2 p {
-                font-size: 1em;
-            }
-            .cta-container {
-                margin-top: 2em;
-            }
-            .season2 .rsvp {
-                margin-top: 0em;
-                font-size: 1em;
-                padding: 0.5em 1.5em 0.5em 1.5em;
-            }
-            .season2 .twitter {
-                height: 2em;
-                width: 2em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <!-- Primary Meta Tags -->
+  <title>Season 2 | BanklessDAO</title>
+  <meta name="title" content="Season 2 | BanklessDAO" />
+  <meta name="description" content="RSVP for Season 2 launch 🚀" />
+  <!-- Open Graph / Facebook (needs to be < 300kb to work on WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://season2.bankless.community/" />
+  <meta property="og:title" content="Season 2 | BanklessDAO" />
+  <meta property="og:description" content="RSVP for Season 2 launch 🚀" />
+  <meta property="og:image" content="https://season2.bankless.community/assets/images/Season1-Meta.jpg" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="330" />
+  <!-- Twitter -->
+  <meta property="twitter:url" content="https://season2.bankless.community/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Season 2 | BanklessDAO" />
+  <meta name="twitter:description" content="RSVP for Season 2 launch 🚀" />
+  <meta name="twitter:image" content="https://season2.bankless.community/assets/images/Season1-Meta.jpg" />
+  <!-- favicons -->
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="33x33" href="/favicon.png" />
+  <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="/favicon.png" />
+  <style type="text/css">
+    * {
+      margin: 0;
+      outline: none;
+    }
+
+    html {
+      background-color: #000;
+    }
+
+    html::-webkit-scrollbar {
+      display: none;
+    }
+
+    @font-face {
+      font-family: "Clear Sans Bold";
+      src: url("/assets/fonts/ClearSans-Bold.woff");
+    }
+
+    @font-face {
+      font-family: "Arial Bold";
+      src: url("/assets/fonts/ARIALBD.woff");
+    }
+
+    .container {
+      height: 100vh;
+      max-height: 100vh;
+      overflow: hidden;
+    }
+
+    .intro {
+      width: 100vw;
+      height: 100vh;
+      background-image: url("/assets/images/Season1-Intro.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-text-container {
+      border-radius: 1em;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5em;
+    }
+
+    .intro h1,
+    h2 {
+      font-family: "Clear Sans Bold";
+      line-height: 1em;
+      font-weight: bold;
+      color: #fff
+    }
+
+    .intro h1 {
+      font-size: 7em;
+    }
+
+    .intro h2 .plus-icon {
+      font-size: 1em;
+      font-weight: bold;
+      color: #cb2529;
+    }
+
+    .intro h2 {
+      font-size: 5em;
+      margin-top: 0.8em;
+    }
+
+    .scroll {
+      position: absolute;
+      top: 0;
+      left: 100vw;
+      min-width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+
+    .recap {
+      height: 100%;
+    }
+
+    .recap img {
+      height: 100%;
+      width: auto;
+    }
+
+    .season2 {
+      width: 100vw;
+      height: 100vh;
+      color: #fff;
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      place-content: center;
+      text-align: center;
+    }
+
+    .season2-background {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .season2-background-top,
+    .season2-background-bottom {
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+    }
+
+    .season2-background-top {
+      background-image: url(/assets/images/Season1-Endscreen-Top.jpg);
+      background-position: top;
+    }
+
+    .season2-background-bottom {
+      background-image: url(/assets/images/Season1-Endscreen-Bottom.jpg);
+      background-position: bottom;
+    }
+
+    .season2-launch h1,
+    .season2-launch p {
+      font-family: "Ariel Bold";
+    }
+
+    .season2 .season2-launch h1 {
+      font-size: 2.5em;
+    }
+
+    .season2 .season2-launch p {
+      margin-top: 0.3em;
+      margin-bottom: 1em;
+      font-size: 1.8em;
+    }
+
+    .red-underline {
+      border-bottom: 0.15em #cb2529 solid;
+    }
+
+    .season2 h1,
+    h2 {
+      font-family: "Clear Sans Bold";
+      line-height: 1em;
+      font-weight: bold;
+    }
+
+    .season2 h1 {
+      font-size: 7em;
+      height: max-content;
+    }
+
+    .season2 h2 .plus-icon {
+      font-size: 1em;
+      font-weight: bold;
+      color: #cb2529;
+    }
+
+    .season2 h2 {
+      font-size: 5em;
+      margin-top: 0.8em;
+    }
+
+    .calendar img {
+      width: 1em;
+      margin-bottom: -0.2em;
+      border-radius: 2px;
+    }
+
+    .cta-container {
+      margin-top: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .season2 .rsvp {
+      font-family: "Arial Bold";
+      font-size: 1.6em;
+      padding: 0.5em 1.5em 0.5em 1.5em;
+      border-radius: 2em;
+      background-color: #cb2529;
+      outline: none;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .season2 .twitter {
+      height: 3.5em;
+      width: 3.5em;
+      background-image: url(/assets/images/Twitter-Logo.png);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-color: #2daae0;
+      background-size: contain;
+      border-radius: 25px;
+      margin: 0.3em;
+      padding: 0.4em;
+      background-position-x: 5px;
+    }
+
+    .twitter a {
+      margin-left: 1.7em;
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 1280px) {
+      .intro h1 {
+        font-size: 3em;
+      }
+
+      .intro h2 {
+        font-size: 2.5em;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .intro-text-container {
+        padding: 3em;
+      }
+
+      .season2-background-bottom {
+        background-image: url(/assets/images/Season1-Endscreen-Bottom-Mobile.jpg);
+        background-position: bottom;
+      }
+
+      .season2 .season2-launch h1 {
+        font-size: 1.3em;
+      }
+
+      .season2 .season2-launch p {
+        font-size: 1em;
+      }
+
+      .season2 h1 {
+        font-size: 3em;
+      }
+
+      .season2 h2 {
+        margin-top: 0.8em;
+        font-size: 2.5em;
+      }
+
+      .season2 p {
+        font-size: 1em;
+      }
+
+      .cta-container {
+        margin-top: 2em;
+      }
+
+      .season2 .rsvp {
+        margin-top: 0em;
+        font-size: 1em;
+        padding: 0.5em 1.5em 0.5em 1.5em;
+      }
+
+      .season2 .twitter {
+        height: 2em;
+        width: 2em;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="intro">
-            <div class="intro-text-container">
-                <h1>
-                    <span class="red-underline">BANKLESS</span>
-                    <br />
-                    <h2><span class="red-underline">DAO</span></span><span class="plus-icon"> +
-                            </span><span class="red-underline">HQ</span>
-                    </h2>
-                </h1>
-            </div>
+  <div class="container">
+    <div class="intro">
+      <div class="intro-text-container">
+        <h1>
+          <span class="red-underline">BANKLESS</span>
+        </h1>
+        <h2><span class="red-underline">DAO</span></span><span class="plus-icon"> +
+          </span><span class="red-underline">HQ</span>
+        </h2>
+      </div>
 
-        </div>
-        <div class="scroll">
-            <div class="recap">
-                <img src="/assets/images/Season1-Recap.jpg" />
-            </div>
-            <div class="season2">
-                <div class="season2-background">
-                    <div class="season2-background-top"></div>
-                    <div class="season2-background-bottom"></div>
-                </div>
-
-                <div style="position: absolute;">
-
-                    <div class="season2-launch">
-                        <h1>Season 2 Launch</h1>
-                        <p>October 8 2021, at 11 AM EDT <br> in Twitter Spaces</p>
-                    </div>
-
-                    <h1>
-                        <span class="red-underline">BANKLESS </span>
-                        <br />
-                        <h2><span class=" red-underline ">DAO</span></span><span class=" plus-icon "> +
-                                </span><span class=" red-underline ">HQ</span>
-                        </h2>
-                    </h1>
-
-                    <div class=" cta-container ">
-                        <a class=" rsvp " href=" https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc ">RSVP</a>
-                        <a class=" twitter " href=" https://twitter.com/BanklessHQ "></a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js " integrity=" sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=" anonymous " referrerpolicy=" no-referrer "></script>
-    <script type="text/javascript">
-        // Automatic scroll
-        $(window).on(" load ", function() {
-            $(" html, body ").animate({
-                scrollLeft: 0,
-            });
+    <div class="scroll">
+      <div class="recap">
+        <img src="/assets/images/Season1-Recap.jpg" />
+      </div>
+      <div class="season2">
+        <div class="season2-background">
+          <div class="season2-background-top"></div>
+          <div class="season2-background-bottom"></div>
+        </div>
 
-            setTimeout(() => {
-                $(" html, body ").animate({
-                        scrollLeft: $(" .season2 ").offset().left,
-                    },
-                    20000
-                );
-            }, 1500);
-        });
+        <div style="position: absolute;">
 
-        function scrollHorizontally(e) {
-            e = window.event || e;
-            const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
-            const scrollSpeed = 20;
-            document.documentElement.scrollLeft -= delta * scrollSpeed;
-            document.body.scrollLeft -= delta * scrollSpeed;
-        }
+          <div class="season2-launch">
+            <h1>Season 2 Launch</h1>
+            <p>
+              <a class="calendar" title="Add to Calendar" target="_blank"
+                href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20211008T150000Z%2F20212008T150000Z&text=BANKLESS%20DAO%20%2B%20HQ%20Season%202%20launch&location=https%3A%2F%2Ftwitter.com%2FBanklessHQ&details=RSVP%3A%20https%3A%2F%2Fwww.notion.so%2Fbankless%2FSeason-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
+                <img src="/assets/images/date.jpg" /> October 8 2021, at 11 AM EDT
+              </a>
+            </p>
+            <p>
+              in <span class="twitter"><a target="_blank" href="https://twitter.com/BanklessHQ">Twitter
+                  Spaces</a></span>
+            </p>
+          </div>
 
-        if (typeof window !== "undefined") {
-            if (window.addEventListener) {
-                // IE9, Chrome, Safari, Opera
-                window.addEventListener("mousewheel", scrollHorizontally, false);
-                // Firefox
-                window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-            } else {
-                // IE 6/7/8
-                window.attachEvent("onmousewheel", scrollHorizontally);
-            }
-        }
-    </script>
+          <h1>
+            <span class="red-underline">BANKLESS</span>
+            <br />
+            <h2><span class="red-underline">DAO</span></span><span class="plus-icon"> +
+              </span><span class="red-underline">HQ</span>
+            </h2>
+          </h1>
+
+          <div class="cta-container">
+            <a class="rsvp" target="_blank"
+              href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">RSVP</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript">
+    // Automatic scroll
+    // $(window).on("load", function () {
+    //   $("html, body").animate({
+    //     scrollLeft: 0,
+    //   });
+
+    //   setTimeout(() => {
+    //     $("html, body").animate({
+    //       scrollLeft: $(".season2").offset().left,
+    //     },
+    //       20000
+    //     );
+    //   }, 1500);
+    // });
+
+    function scrollHorizontally(e) {
+      e = window.event || e;
+      const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+      const scrollSpeed = 20;
+      document.documentElement.scrollLeft -= delta * scrollSpeed;
+      document.body.scrollLeft -= delta * scrollSpeed;
+    }
+
+    if (typeof window !== "undefined") {
+      if (window.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        window.addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+      } else {
+        // IE 6/7/8
+        window.attachEvent("onmousewheel", scrollHorizontally);
+      }
+    }
+  </script>
 </body>
 
 </html>
