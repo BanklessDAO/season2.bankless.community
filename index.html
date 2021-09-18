@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://season2.bankless.community/" />
     <meta property="og:title" content="Season 2 | Bankless DAO" />
     <meta property="og:description" content="Recap for Season 1 and intro to Season 2 🚀" />
-    <meta property="og:image" content="https://season2.bankless.community/Season1-Meta.jpg" />
+    <meta property="og:image" content="https://season2.bankless.community/assets/images/Season1-Meta.jpg" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="330" />
     <!-- Twitter -->
@@ -21,19 +21,33 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Season 2 | Bankless DAO" />
     <meta name="twitter:description" content="Recap for Season 1 and intro to Season 2 🚀" />
-    <meta name="twitter:image" content="https://season2.bankless.community/Season1-Meta.jpg" />
+    <meta name="twitter:image" content="https://season2.bankless.community/assets/images/Season1-Meta.jpg" />
     <!-- favicons -->
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="33x33" href="/favicon.png" />
     <link rel="apple-touch-icon" type="image/png" sizes="33x33" href="/favicon.png" />
     <style type="text/css">
-        html,
         * {
             margin: 0;
+            outline: none;
+        }
+        
+        html {
+            background-color: #000;
         }
         
         html::-webkit-scrollbar {
             display: none;
+        }
+        
+        @font-face {
+            font-family: "Clear Sans Bold";
+            src: url("/assets/fonts/ClearSans-Bold.woff");
+        }
+        
+        @font-face {
+            font-family: "Arial Bold";
+            src: url("/assets/fonts/ARIALBD.woff");
         }
         
         .container {
@@ -69,6 +83,7 @@
         .season2 {
             width: 100vw;
             height: 100vh;
+            color: #fff;
             max-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -77,41 +92,129 @@
             text-align: center;
         }
         
+        .season2-background {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .season2-background-top,
+        .season2-background-bottom {
+            width: 100%;
+        }
+        
+        .season2-background-top {
+            width: 100vw;
+            height: 50%;
+            object-position: top;
+            object-fit: contain;
+        }
+        
+        .season2-background-bottom {
+            height: 50%;
+            /* margin-bottom: 10%; */
+            object-position: bottom right;
+            object-fit: contain;
+        }
+        
+        .season2-launch h1,
+        .season2-launch p {
+            font-family: "Ariel Bold";
+        }
+        
+        .season2 .season2-launch h1 {
+            font-size: 2.5em;
+        }
+        
+        .season2 .season2-launch p {
+            margin-top: 0.3em;
+            margin-bottom: 1em;
+            font-size: 1.8em;
+        }
+        
+        .red-underline {
+            text-decoration-line: underline;
+            text-decoration-thickness: 0.2em;
+            text-decoration-color: #cb2529;
+        }
+        
         .season2 h1,
         h2 {
+            font-family: "Clear Sans Bold";
             line-height: 1em;
             font-weight: bold;
         }
         
         .season2 h1 {
-            font-size: 6em;
+            font-size: 8em;
         }
         
-        .season2 h1 span {
+        .season2 h2 span {
             font-size: 1em;
             font-weight: bold;
             color: #cb2529;
         }
         
         .season2 h2 {
-            font-size: 3em;
+            font-size: 4.5em;
         }
         
-        .season2 p {
-            margin-top: 1em;
-            font-size: 2em;
-            line-height: 1em;
+        .cta-container {
+            margin-top: 3.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .season2 .rsvp {
+            font-family: "Arial Bold";
+            font-size: 1.5em;
+            padding: 0.5em 1.5em 0.5em 1.5em;
+            border-radius: 2em;
+            background-color: #cb2529;
+            color: #fff;
+            text-decoration: none;
+            outline: none;
+        }
+        
+        .season2 .twitter {
+            margin-left: 0.5em;
+            height: 3em;
+            width: 3em;
+            background-image: url("/assets/images/Twitter-Logo.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
         
         @media (max-width: 800px) {
+            .season2 .season2-launch h1 {
+                font-size: 1.3em;
+            }
+            .season2 .season2-launch p {
+                font-size: 1em;
+            }
             .season2 h1 {
                 font-size: 3em;
             }
             .season2 h2 {
-                font-size: 2em;
+                font-size: 1.8em;
             }
             .season2 p {
                 font-size: 1em;
+            }
+            .cta-container {
+                margin-top: 2em;
+            }
+            .season2 .rsvp {
+                margin-top: 0em;
+                font-size: 1em;
+                padding: 0.5em 1.5em 0.5em 1.5em;
+            }
+            .season2 .twitter {
+                height: 2em;
+                width: 2em;
             }
         }
     </style>
@@ -119,28 +222,36 @@
 
 <body>
     <div class="container">
-        <img class="intro" src="/Season1-Intro.jpg" />
+        <img class="intro" src="/assets/images/Season1-Intro.jpg" />
         <div class="scroll">
             <div class="recap">
-                <img src="/Season1-Recap.jpg" />
+                <img src="/assets/images/Season1-Recap.jpg" />
             </div>
             <div class="season2">
-                <h2>Season 2</h2>
-                <h1>
-                    Bankless
-                    <br /> HQ <span>+</span> DAO
-                </h1>
-                <p>
-                    October 8, 2021
-                    <br /> 11 am EDT
-                    <br />
-                    <a href="https://twitter.com/BanklessHQ">@BanklessHQ Twitter</a>
-                </p>
-                <p>
-                    <a href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
-              RSVP
-            </a>
-                </p>
+                <div class="season2-background">
+                    <img src="/assets/images/Season1-Endscreen-Top.jpg" alt="" class="season2-background-top">
+                    <img src="/assets/images/Season1-Endscreen-Bottom.jpg" alt="" class="season2-background-bottom">
+                </div>
+
+                <div style="position: absolute;">
+
+                    <div class="season2-launch">
+                        <h1>Season 2 Launch</h1>
+                        <p>October 8 2021, at 11 AM EDT <br> in Twitter Spaces</p>
+                    </div>
+
+                    <h1>
+                        Bankless
+                        <br />
+                        <h2><u class="red-underline">DAO</u><span> + </span><u class="red-underline">HQ</u></h2>
+                    </h1>
+
+                    <div class="cta-container">
+                        <a class="rsvp" href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">RSVP</a>
+                        <a class="twitter" href="https://twitter.com/BanklessHQ"></a>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
