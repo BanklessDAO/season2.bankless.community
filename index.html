@@ -59,7 +59,47 @@
         .intro {
             width: 100vw;
             height: 100vh;
-            object-fit: cover;
+            background-image: url("/assets/images/Season1-Intro.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .intro-text-container {
+            width: 60%;
+            height: 60%;
+            border-radius: 1em;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .intro h1,
+        h2 {
+            font-family: "Clear Sans Bold";
+            line-height: 1em;
+            font-weight: bold;
+            color: #fff
+        }
+        
+        .intro h1 {
+            font-size: 8em;
+        }
+        
+        .intro h2 .plus-icon {
+            font-size: 1em;
+            font-weight: bold;
+            color: #cb2529;
+        }
+        
+        .intro h2 {
+            font-size: 6em;
+            margin-top: 0.3em;
         }
         
         .scroll {
@@ -95,28 +135,26 @@
         .season2-background {
             width: 100vw;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
         
         .season2-background-top,
         .season2-background-bottom {
-            width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
         }
         
         .season2-background-top {
-            width: 100vw;
-            height: 50%;
-            object-position: top;
-            object-fit: contain;
+            background-image: url(/assets/images/Season1-Endscreen-Top.jpg);
+            background-position: top;
         }
         
         .season2-background-bottom {
-            height: 50%;
-            /* margin-bottom: 10%; */
-            object-position: bottom right;
-            object-fit: contain;
+            background-image: url(/assets/images/Season1-Endscreen-Bottom.jpg);
+            background-position: bottom;
         }
         
         .season2-launch h1,
@@ -138,6 +176,7 @@
             text-decoration-line: underline;
             text-decoration-thickness: 0.2em;
             text-decoration-color: #cb2529;
+            text-decoration-skip-ink: none;
         }
         
         .season2 h1,
@@ -149,16 +188,18 @@
         
         .season2 h1 {
             font-size: 8em;
+            height: max-content;
         }
         
-        .season2 h2 span {
+        .season2 h2 .plus-icon {
             font-size: 1em;
             font-weight: bold;
             color: #cb2529;
         }
         
         .season2 h2 {
-            font-size: 4.5em;
+            font-size: 6em;
+            margin-top: 0.3em;
         }
         
         .cta-container {
@@ -180,7 +221,7 @@
         }
         
         .season2 .twitter {
-            margin-left: 0.5em;
+            margin-left: 0.8em;
             height: 3.5em;
             width: 3.5em;
             background-image: url("/assets/images/Twitter-Logo.png");
@@ -188,7 +229,24 @@
             background-repeat: no-repeat;
         }
         
+        @media (max-width: 1280px) {
+            .intro-text-container {
+                width: 80%;
+                height: 50%;
+            }
+            .intro h1 {
+                font-size: 3em;
+            }
+            .intro h2 {
+                font-size: 2.5em;
+            }
+        }
+        
         @media (max-width: 800px) {
+            .season2-background-bottom {
+                background-image: url(/assets/images/Season1-Endscreen-Bottom-Mobile.jpg);
+                background-position: bottom;
+            }
             .season2 .season2-launch h1 {
                 font-size: 1.3em;
             }
@@ -199,7 +257,8 @@
                 font-size: 3em;
             }
             .season2 h2 {
-                font-size: 1.8em;
+                margin-top: 0.3em;
+                font-size: 2.5em;
             }
             .season2 p {
                 font-size: 1em;
@@ -222,15 +281,26 @@
 
 <body>
     <div class="container">
-        <img class="intro" src="/assets/images/Season1-Intro.jpg" />
+        <div class="intro">
+            <div class="intro-text-container">
+                <h1>
+                    <span class="red-underline">BANKLESS</span>
+                    <br />
+                    <h2><span class="red-underline">DAO</span></span><span class="plus-icon"> +
+                            </span><span class="red-underline">HQ</span>
+                    </h2>
+                </h1>
+            </div>
+
+        </div>
         <div class="scroll">
             <div class="recap">
                 <img src="/assets/images/Season1-Recap.jpg" />
             </div>
             <div class="season2">
                 <div class="season2-background">
-                    <img src="/assets/images/Season1-Endscreen-Top.jpg" alt="" class="season2-background-top">
-                    <img src="/assets/images/Season1-Endscreen-Bottom.jpg" alt="" class="season2-background-bottom">
+                    <div class="season2-background-top"></div>
+                    <div class="season2-background-bottom"></div>
                 </div>
 
                 <div style="position: absolute;">
@@ -241,36 +311,38 @@
                     </div>
 
                     <h1>
-                        Bankless
+                        <span class="red-underline">BANKLESS </span>
                         <br />
-                        <h2><u class="red-underline">DAO</u><span> + </span><u class="red-underline">HQ</u></h2>
+                        <h2><span class=" red-underline ">DAO</span></span><span class=" plus-icon "> +
+                                </span><span class=" red-underline ">HQ</span>
+                        </h2>
                     </h1>
 
-                    <div class="cta-container">
-                        <a class="rsvp" href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">RSVP</a>
-                        <a class="twitter" href="https://twitter.com/BanklessHQ"></a>
+                    <div class=" cta-container ">
+                        <a class=" rsvp " href=" https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc ">RSVP</a>
+                        <a class=" twitter " href=" https://twitter.com/BanklessHQ "></a>
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js " integrity=" sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=" anonymous " referrerpolicy=" no-referrer "></script>
     <script type="text/javascript">
         // Automatic scroll
-        // $(window).on("load", function() {
-        //     $("html, body").animate({
-        //         scrollLeft: 0,
-        //     });
+        $(window).on(" load ", function() {
+            $(" html, body ").animate({
+                scrollLeft: 0,
+            });
 
-        //     setTimeout(() => {
-        //         $("html, body").animate({
-        //                 scrollLeft: $(".season2").offset().left,
-        //             },
-        //             20000
-        //         );
-        //     }, 1500);
-        // });
+            setTimeout(() => {
+                $(" html, body ").animate({
+                        scrollLeft: $(" .season2 ").offset().left,
+                    },
+                    20000
+                );
+            }, 1500);
+        });
 
         function scrollHorizontally(e) {
             e = window.event || e;
