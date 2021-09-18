@@ -127,8 +127,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      place-content: center;
       text-align: center;
+      padding-top: 2em;
+      background: linear-gradient(165deg, rgb(254 254 6) 0%, rgb(251 70 1 / 23%) 50%, rgba(255, 255, 255, 0) 80%);
     }
 
     .season2-background {
@@ -265,6 +266,10 @@
         background-position: bottom;
       }
 
+      .season2 .season2-launch {
+        margin-top: 6em;
+      }
+
       .season2 .season2-launch h1 {
         font-size: 1.3em;
       }
@@ -300,6 +305,14 @@
         height: 2em;
         width: 2em;
       }
+
+    }
+
+    canvas {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      right: 0;
     }
   </style>
 </head>
@@ -321,41 +334,33 @@
       <div class="recap">
         <img src="/assets/images/Season1-Recap.jpg" />
       </div>
-      <div class="season2">
-        <div class="season2-background">
-          <div class="season2-background-top"></div>
-          <div class="season2-background-bottom"></div>
+      <div class="season2" id="rsvp">
+        <div class="season2-launch">
+          <h1>Season 2 Launch</h1>
+          <p>
+            <a class="calendar" title="Add to Calendar" target="_blank"
+              href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20211008T150000Z%2F20212008T150000Z&text=BANKLESS%20DAO%20%2B%20HQ%20Season%202%20launch&location=https%3A%2F%2Ftwitter.com%2FBanklessHQ&details=RSVP%3A%20https%3A%2F%2Fwww.notion.so%2Fbankless%2FSeason-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
+              <img src="/assets/images/date.jpg" /> October 8 2021, at 11 AM EDT
+            </a>
+          </p>
+          <p>
+            in <span class="twitter"><a target="_blank" href="https://twitter.com/BanklessHQ">Twitter
+                Spaces</a></span>
+          </p>
         </div>
 
-        <div style="position: absolute;">
+        <h1>
+          <span class="red-underline">BANKLESS</span>
+          <br />
+          <h2><span class="red-underline">DAO</span></span><span class="plus-icon"> +
+            </span><span class="red-underline">HQ</span>
+          </h2>
+        </h1>
 
-          <div class="season2-launch">
-            <h1>Season 2 Launch</h1>
-            <p>
-              <a class="calendar" title="Add to Calendar" target="_blank"
-                href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20211008T150000Z%2F20212008T150000Z&text=BANKLESS%20DAO%20%2B%20HQ%20Season%202%20launch&location=https%3A%2F%2Ftwitter.com%2FBanklessHQ&details=RSVP%3A%20https%3A%2F%2Fwww.notion.so%2Fbankless%2FSeason-2-Launch-7d06aaf56df444d48cd0d551edadebdc">
-                <img src="/assets/images/date.jpg" /> October 8 2021, at 11 AM EDT
-              </a>
-            </p>
-            <p>
-              in <span class="twitter"><a target="_blank" href="https://twitter.com/BanklessHQ">Twitter
-                  Spaces</a></span>
-            </p>
-          </div>
+        <div class="cta-container">
+          <a class="rsvp" target="_blank"
+            href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">RSVP</a>
 
-          <h1>
-            <span class="red-underline">BANKLESS</span>
-            <br />
-            <h2><span class="red-underline">DAO</span></span><span class="plus-icon"> +
-              </span><span class="red-underline">HQ</span>
-            </h2>
-          </h1>
-
-          <div class="cta-container">
-            <a class="rsvp" target="_blank"
-              href="https://www.notion.so/bankless/Season-2-Launch-7d06aaf56df444d48cd0d551edadebdc">RSVP</a>
-
-          </div>
         </div>
       </div>
     </div>
@@ -399,6 +404,8 @@
       }
     }
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.4.2/pixi.min.js"></script>
+  <script src="/particules.js"></script>
 </body>
 
 </html>
