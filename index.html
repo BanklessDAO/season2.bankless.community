@@ -365,19 +365,19 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript">
     // Automatic scroll
-    // $(window).on("load", function () {
-    //   $("html, body").animate({
-    //     scrollLeft: 0,
-    //   });
+    $(window).on("load", function () {
+      $("html, body").animate({
+        scrollLeft: 0,
+      });
 
-    //   setTimeout(() => {
-    //     $("html, body").animate({
-    //       scrollLeft: $(".season2").offset().left,
-    //     },
-    //       20000
-    //     );
-    //   }, 1500);
-    // });
+      setTimeout(() => {
+        $("html, body").animate({
+          scrollLeft: $(".season2").offset().left,
+        },
+          20000
+        );
+      }, 1500);
+    });
 
     function scrollHorizontally(e) {
       e = window.event || e;
