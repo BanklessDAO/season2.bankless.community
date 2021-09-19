@@ -389,8 +389,10 @@
         }
         const season2LaunchEventTimeInIST = moment.tz("2021-10-08 11:00", "America/New_York")
         const userTimeZone = moment.tz.guess(true);
+        const eventTimeMinutes = season2LaunchEventTimeInIST.tz(userTimeZone).format("mm")
+        console.log(eventTimeMinutes)
         $('.date').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("MMMM D YYYY"))
-        $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH A z"))
+        eventTimeMinutes === "00" ? $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH A z")) : $('.time').text(season2LaunchEventTimeInIST.tz(userTimeZone).format("HH:mm A z"))
     </script>
 </body>
 
